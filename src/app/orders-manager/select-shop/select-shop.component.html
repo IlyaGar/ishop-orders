@@ -1,0 +1,17 @@
+<h1>Выбор склада</h1>
+<mat-form-field appearance="outline">
+    <mat-label>Склад</mat-label>
+    <mat-select [formControl]="shopControl" required>
+        <mat-option *ngFor="let shop of shops" [value]="shop">
+        {{shop.name}}
+        </mat-option>
+    </mat-select>
+    <mat-error *ngIf="shopControl.hasError('required')">Please choose an shop</mat-error>
+    <mat-hint>{{shopControl.value?.sound}}</mat-hint>
+</mat-form-field>
+
+<div mat-dialog-actions align="end">
+    <button mat-stroked-button (click)="onOkClick(shopControl.value)" [disabled]="!shopControl.value">Принять</button>
+</div>
+
+<!-- [disabled]="shopControl.value" -->

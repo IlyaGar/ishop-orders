@@ -1,0 +1,30 @@
+<div class="content">
+
+    <div class="column sunny-morning-gradient">
+
+        <div class="header-col">
+            <div>Собираются</div>
+        </div>
+    
+        <div class="order-list">
+            <div class="order-list-item" *ngFor="let order of ordersIn; let i = index">
+                <p class="order-item">{{order}}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="column dusty-grass-gradient">
+
+        <div class="header-col">
+            <div>Готовы</div>
+        </div>
+
+        <div class="order-list">
+            <div class="order-list-item" *ngFor="let order of ordersOut; let i = index">
+                <p class="order-item">{{order}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

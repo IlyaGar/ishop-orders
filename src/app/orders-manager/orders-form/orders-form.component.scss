@@ -1,0 +1,44 @@
+.content {
+    height: 100vh;
+    display: flex;
+}
+.content-col {
+    display: flex;
+}
+.column {
+    flex: 50%;
+}
+.order-list {
+    // margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 90vh;
+    width: 100%;
+}
+p {
+    width: 100%;
+    text-align: center;
+}
+.order-list-item {
+    height: 10vh;
+}
+.order-item {
+    // margin-right: 2vh;
+    position: relative;
+    top: 30px;
+    font-size: 8vh;
+    letter-spacing: .5vw;
+    font-family: "Impact", fantasy;
+    color: rgb(36, 51, 136);
+}
+.header-col {
+    height: 6vh;
+    font-size: 5vh;
+    background-color: rgba(202, 66, 243, 0.212);     
+    border-bottom: 2px solid grey;
+    color: rgb(55, 55, 230);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
