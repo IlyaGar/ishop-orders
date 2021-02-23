@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { timer } from 'rxjs';
 import { CookieModel } from '../models/cookie-model';
 import { Store } from '../models/store';
 import { StoreList } from '../models/store-list';
@@ -53,7 +52,6 @@ export class OrdersFormComponent implements OnInit {
   }
 
   getOrders() {
-    let t = this.cookieOrdersService.getShop();
     this.interval = setInterval(() => {
       if(!this.cookieOrdersService.getShop())
         this.openSelectShopComponent();
@@ -68,6 +66,6 @@ export class OrdersFormComponent implements OnInit {
           console.log(error);
         });
       }
-    }, 5000);
+    }, 10000);
    }
 }
