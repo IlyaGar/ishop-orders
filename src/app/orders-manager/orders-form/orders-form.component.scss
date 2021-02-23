@@ -22,15 +22,26 @@ p {
 }
 .order-list-item {
     height: 10vh;
+    margin: 0 2rem;
+}
+.order-list-item-more-27 {
+    height: 8vh;
+    margin: 0 1rem;
 }
 .order-item {
-    // margin-right: 2vh;
     position: relative;
     top: 30px;
     font-size: 8vh;
     letter-spacing: .5vw;
-    font-family: "Impact", fantasy;
-    color: rgb(36, 51, 136);
+    font-family: fantasy;
+    color: rgb(8, 117, 168);
+}
+.order-item-more-27 {
+    font-size: 6vh;
+    letter-spacing: .4vw;
+}
+.order-item-odd {
+    text-decoration: underline;
 }
 .header-col {
     height: 6vh;

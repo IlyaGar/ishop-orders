@@ -7,8 +7,10 @@
         </div>
     
         <div class="order-list">
-            <div class="order-list-item" *ngFor="let order of ordersIn; let i = index">
-                <p class="order-item">{{order}}</p>
+            <div class="order-list-item" 
+                [ngClass]="{ 'order-list-item-more-27': countOrdersIn > 27 }" 
+                *ngFor="let order of ordersIn; let i = index">
+                <p class="order-item" [ngClass]="{ 'order-item-more-27': countOrdersIn > 27 }">{{order}}</p>
             </div>
         </div>
 
@@ -21,8 +23,10 @@
         </div>
 
         <div class="order-list">
-            <div class="order-list-item" *ngFor="let order of ordersOut; let i = index">
-                <p class="order-item">{{order}}</p>
+            <div class="order-list-item row" 
+                [ngClass]="{ 'order-list-item-more-27': countOrdersOut > 27 }" 
+                *ngFor="let order of ordersOut; let i = index; let odd = odd; let even = even;">
+                <p class="order-item" [ngClass]="{ 'order-item-more-27': countOrdersOut > 27 }">{{order}}</p>
             </div>
         </div>
     </div>

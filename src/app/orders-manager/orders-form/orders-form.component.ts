@@ -16,6 +16,8 @@ export class OrdersFormComponent implements OnInit {
 
   interval: any;
   dialogRef: any;
+  countOrdersIn: number;
+  countOrdersOut: number;
   ordersIn: string[] = [];
   ordersOut: string[] = [];
 
@@ -60,6 +62,8 @@ export class OrdersFormComponent implements OnInit {
           if(response) {
             this.ordersIn = response.busy;
             this.ordersOut = response.ready;
+            this.countOrdersIn = this.ordersIn.length;
+            this.countOrdersOut = this.ordersOut.length;
           }
         }, 
         error => { 
@@ -67,5 +71,5 @@ export class OrdersFormComponent implements OnInit {
         });
       }
     }, 10000);
-   }
+  }
 }
